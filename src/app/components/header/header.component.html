@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="header-toolbar">
+    <span>Angular Quiz</span>
+    <span class="spacer"></span>
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search by ID</mat-label>
+      <input
+        matInput
+        type="number"
+        min="1"
+        [(ngModel)]="searchId"
+        (input)="onSearch()"
+        placeholder="Enter user ID"
+      />
+    </mat-form-field>
+  </mat-toolbar>
+  
