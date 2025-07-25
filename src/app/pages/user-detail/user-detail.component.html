@@ -1,0 +1,14 @@
+<div class="detail-container" *ngIf="!loading && user">
+    <mat-card>
+      <img mat-card-image [src]="user.avatar" alt="{{ user.first_name }}">
+      <mat-card-content>
+        <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        <p>ID: {{ user.id }}</p>
+      </mat-card-content>
+    </mat-card>
+  
+    <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+  </div>
+  
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  
